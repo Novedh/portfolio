@@ -7,6 +7,24 @@ function App() {
   const handleSelectItem = (item: string) => {
     console.log(item);
   };
+
+  const socialLinks = [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com",
+      color: "primary",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/Novedh",
+      color: "dark",
+    },
+  ];
+
+  const handleLinkClick = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div>
       <Alert>hloow</Alert>
@@ -15,9 +33,17 @@ function App() {
         heading="Header"
         onSelectItem={handleSelectItem}
       />
-      <Button color="secondary" onClick={() => console.log("click")}>
-        my linkedin
-      </Button>
+      <div className="d-flex gap-2">
+        {socialLinks.map((link, index) => (
+          <Button
+            key={index}
+            color={link.color}
+            onClick={() => handleLinkClick(link.url)}
+          >
+            {link.name}
+          </Button>
+        ))}
+      </div>
     </div>
   );
 }
