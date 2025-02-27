@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Body.module.css";
 
 interface BodyProps {
   heading: string;
@@ -9,7 +10,18 @@ interface BodyProps {
 function Body({ heading, description, children }: BodyProps) {
   return (
     <>
-      <h1 className="text-center">{heading}</h1>
+      <h1
+        style={{
+          textAlign: "center",
+          fontFamily: "Didot, serif",
+          fontWeight: "bold",
+          fontSize: "2rem",
+          letterSpacing: "0.05em",
+          color: "#4a5568",
+        }}
+      >
+        {heading}
+      </h1>
       {description && (
         <p className="text-center text-muted mb-3">{description}</p>
       )}
