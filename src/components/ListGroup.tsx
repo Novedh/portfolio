@@ -10,6 +10,9 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
   return (
     <>
       <h1 className="text-center">{heading}</h1>
+      <p className="text-center text-muted mb-3">
+        Select an item from the list below
+      </p>
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
