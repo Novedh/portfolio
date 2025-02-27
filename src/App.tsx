@@ -7,7 +7,7 @@ function App() {
   const socialLinks = [
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com",
+      url: "https://www.linkedin.com/in/devon-huang0/",
       color: "primary",
     },
     {
